@@ -1,0 +1,8 @@
+opencv-python
+numpy
+pillow
+matplotlib
+easyocr
+streamlit
+tqdm
+python-Levenshtein
