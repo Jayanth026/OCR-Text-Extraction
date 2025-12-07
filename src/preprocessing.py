@@ -57,3 +57,15 @@ def preprocess_image(path: str):
     denoised = denoise(gray)
     th = threshold(denoised)
     return img, th
+
+
+def preprocess_image_array(img):
+    """
+    Preprocess an already loaded image (NumPy array).
+    Returns (orig, processed)
+    """
+    img_resized = resize_for_ocr(img)
+    gray = to_grayscale(img_resized)
+    denoised = denoise(gray)
+    th = threshold(denoised)
+    return img_resized, th
